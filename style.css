@@ -1,0 +1,6 @@
+tr, td, th, table {
+    border: 1px solid black;
+}
+tr td[colspan=2] {
+    text-align: center;
+} 
