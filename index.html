@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <title>Cours HTML</title>
     <link rel="stylesheet" href="./style.css">
-    <script src="./script.js"></script>
+    
 </head>
 <body>
-    <p>Bonjour je suis de bonne humeur !</p>
+    <p class="bonjour">Bonjour je suis de bonne humeur !</p>
     
-    <table>
+    <table class="bonjour">
         <!-- Le tr sert à rajouter des lignes à mon tableau-->
         <tr>
             <!-- Les th et td ont le meme role ajouté des colonnes sur ma ligne sauf que le th est en gras 
@@ -88,7 +88,7 @@
         <tr>
             <th colspan="10">Time Table</th>
         </tr>
-        <td rowspan="10">Hours</td>
+        <td rowspan="6">Hours</td>
         <td colspan="2">Mon</td>
         <td colspan="2">Tue</td>
         <td colspan="2">Wed</td>
@@ -128,5 +128,35 @@
 <td colspan="2">Social</td>
 </tr>
     </table>
+
+    <br><br>
+    <table></table>
+    <p id="animal">Test</p>
+    <form action="">
+        <label for="name">Nom : </label>
+        <input type="text" name="name" id="name">
+        <br><br>
+        <label for="prenom">Prénom</label>
+        <input type="text" name="prenom" id="prenom">
+        <br><br>
+        <label for="age">Age :</label>
+        <input type="number" name="age" id="age">
+        <br><br>
+        <input type="radio" name="sexe" id="sexe">
+        <label for="masculin">masculin</label>
+        <br>
+        <input type="radio" name="sexe" id="feminin">
+        <label for="feminin">Féminin</label>
+        <br>
+        <input type="radio" name="sexe" id="autruche">
+        <label for="autruche">Autruche</label>
+        <br><br>
+        <input type="checkbox" name="me" id="me">
+        <label for="me">Je suis moi ?</label>
+        <br><br>
+        <input type="submit" value="Envoyer !">
+         </form>
+
+    <script src="./script.js"></script>
 </body>
 </html>
