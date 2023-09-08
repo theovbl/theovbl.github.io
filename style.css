@@ -3,6 +3,7 @@ tr, td, th, table {
     border-radius: 15px;
     border-spacing: 0px;
 }
+/* Je séléctionne tout les td */
 tr td[colspan="2"] {
     text-align: center;
 }
@@ -14,7 +15,44 @@ tr:nth-child(3) {
 .bonjour tr td{
     background-color: aquamarine;
 }
-
+/* Je modifie le curseur que quand la souris passe par dessu */
 #animal:hover {
     cursor: pointer
+}
+
+/* Je séléctionne tout les input de type submit et de type reset*/
+
+#message {
+    resize: none;
+}
+/* Je créer un animation qui ce nomme animation img au début elle va transform scaleX en -1
+puis elle va transform scaleX en 1 et à la fin elle va transform scaleX en -1 */
+@keyframes animationimg {
+    0% {
+        transform: scaleX(-1)
+    }
+    100% {
+        transform: scaleX(1);
+    }
+    50% {
+        transform: scaleX(1)
+    }
+}
+
+img {
+    border: 3px dashed gray;
+    border-radius: 25px;
+    opacity: 0.6;
+    width: auto; 
+    height: auto;
+    /* height: auto; max-width:100%; Je ren mon image recurcive/Responsive*/
+    filter: blur(0px);
+    animation: animationimg 20s ease-in infinite;
+    /* Je dis que l'élément img joue l'animation animationimg qu'elle doit durée 1.5s en 
+    fonctionnement en ease-in et elle ce joue un nombre infini de fois */
+
+}
+
+img:hover {
+    transform: scaleX(-1);
 }
