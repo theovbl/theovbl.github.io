@@ -1,3 +1,14 @@
+/* Font face sert à rajouter de nouvelle famille d'écriture qui ne sont pas disponible 
+Nativement (Sans rien rajouter en plus) 
+Installer des nouvelles polices d'écriture */
+@font-face {
+    font-family: BebasNeue;
+    src: url(./Bebas_Neue/BebasNeue-Regular.ttf);
+}
+@font-face {
+    font-family: Nabla;
+    src: url(./fonts/Nabla/Nabla-Regular-VariableFont_EDPT\,EHLT.ttf);
+}
 tr, td, th, table {
     border: 1px solid red;
     border-radius: 15px;
@@ -55,4 +66,351 @@ img {
 
 img:hover {
     transform: scaleX(-1);
+}
+form {
+    width: 10px;
+    position: absolute;
+}
+
+fieldset {
+    width: 10px;
+}
+
+.conteneur {
+    background-color: black;
+    height: 600px ;
+    width: 100%; /* Prend toute la largeur de la page */
+    display: flex; /* L'afficher ce met en mode flex*/
+    justify-content: space-around; /* justify content joue avec la largeur quand le flex-direction est en row quand flex-direction 
+    est en column il joue en hauteur */
+    align-items: center;
+    /* align-items fait la meme chose que justify content mais inverser c'est à dire qu'il joue avec la hauteur quand flex direction
+    est en row et en largeur quand il est en column */
+    /* flex direction: change de direction */
+   /* align-content: space-around; */
+    /* Fait la meme chose que align-items mais il gère aussi les multilignes de conteneur */
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* le flex-wrap sert à remettre à la ligne quand les éléments n'ont plus de place dans la largeur 
+    quand il est en mode nowrap) */
+
+}       
+
+.rouge {
+    background-color: red;
+    width: 10%; /* Largeur */
+    height: 100px; /* Hauteur */
+    border: 2px solid white;
+}
+
+.vert {
+    background-color: green;
+    width: 10%;
+    height: 100px;
+    border: 2px solid white;
+}
+
+.orange {
+    background-color: orange;
+    width: 10%;
+    height: 100px;
+    border: 2px solid white;
+}
+
+.cube {
+    background-color: rgba(187, 71, 69, 0.858);
+    height: 600px ;
+    width: 100%; /* Prend toute la largeur de la page */
+    display: flex; /* L'afficher ce met en mode flex*/
+    justify-content: space-around; /* justify content joue avec la largeur quand le flex-direction est en row quand flex-direction 
+    est en column il joue en hauteur */
+    align-items: center;
+
+    flex-direction: row;
+    flex-wrap: wrap;
+   
+
+}       
+.a {
+    background-color: white;
+    width: 40%; /* Largeur */
+    height: 80%; /* Hauteur */
+    
+   
+}
+
+.b {
+    background-color: white;
+    width: 10%;
+    height: 100px;
+    
+}
+.c {
+    background-color: white;
+    width: 10%;
+    height: 100px;
+    
+}
+.d {
+    background-color: white;
+    width: 10%;
+    height: 100px;
+    
+}
+.e {
+    background-color: white;
+    width: 10%;
+    height: 100px;
+    flex-direction: row;
+    display: flex;
+    align-items:center;
+    
+    
+}
+
+.flexbox {
+    font-size: 70px;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgba(187, 71, 69, 0.858);
+
+    
+}
+.grand {
+    background-color: darkgray;
+    width: 75%;
+    height: 500px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.petit {
+    background-color: aquamarine;
+    width: 45%;
+   height: 90%;
+    display: flex;
+    align-items: flex-end;
+}
+.petit h1 {
+    color: darkgray;
+    font-size: 3em;
+    margin: 15px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#secondpetit {
+    background-color: transparent;
+    align-items: space-between;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.moyen {
+    width: 100%;
+    height: 35%;
+    background-color: aquamarine;
+}
+.toutpetit {
+    width: 45%;
+    height: 20%;
+    background-color: aquamarine;
+}
+.gros-cube {
+    background-color: purple;
+    width: 75%;
+    height: 600px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.rouge1 {
+    background-color: red;
+    width: 45%;
+    height: 20%;
+}
+.css-flexbox {
+    color: white;
+}
+.orange1 {
+    background-color: orange;
+    width: 45%;
+    height: 20%;
+}
+.rose1 {
+    background-color: pink;
+    width: 45%;
+    height: 20%;
+}
+.bleu1 {
+    background-color:blue;
+    width: 45%;
+    height: 20%;
+}
+.orange2 {
+    background-color: orange;
+    width: 10%;
+    height: 10%;
+}
+.orange3 {
+    background-color: black;
+    width: 10%;
+    height: 10%;
+}
+.rouge2 {
+    background-color: red;
+    width: 100%;
+    height: 20%;
+}
+.rouge3 {
+    background-color: red;
+    width: 10%;
+    height: 0%;
+}
+.bloc {
+    background-color: black;
+    width: 45%;
+    height: 500px;
+}
+.bleu2 {
+    background-color: blue;
+    width: 50%;
+    height: 10%;
+}
+.bleu3 {
+    background-color:orange;
+    width: 45%;
+    height: 20%;
+}
+.rose2 {
+    background-color:pink;
+    width: 100%;
+    height: 20%;
+}
+.css {
+    font-size: 30px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+   
+}
+
+
+
+/* corection exercice */
+.violet {
+    background-color: violet;
+}
+.Orange {
+    background-color: orange;
+}
+.bleu {
+    background-color: blue;
+}
+.red {
+    background-color: red;
+}
+.flexbox {
+    width: 70%;
+    height: 600px;
+    background-color: blueviolet;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.cote_gauche {
+  /*  background-color: aqua;*/
+    width: 40%;
+    height: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.cote_droit {
+   
+    width: 40%;
+    height: 70%;
+}
+.long {
+    width: 100%;
+    height: 20%;
+}
+.cote_gauche .gauche {
+   /* background-color: beige;temporraire pour visualiser sur l'écran et situé les carrés*/
+    width: 50%;
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.cote_gauche .droite {
+    width: 45%;
+    height: 75%;
+}
+
+.cote_gauche .gauche .petite {
+    width: 100%;
+    height: 65%;
+}
+.cote_gauche .gauche .trespetite {
+    width: 100%;
+    height: 30%;
+}
+.cote_droit{
+   
+    width: 40%;
+    height: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.cote_droit .gauche {
+    
+    width: 45%;
+    height: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cote_droit .gauche .petite1 {
+    width: 100%;
+    height: 35%;
+}
+.cote_droit .gauche .petite2 {
+    width: 100%;
+    height: 20%;
+}
+.cote_droit .gauche .petite3 {
+    width: 100%;
+    height: 35%;
+}
+
+.cote_droit .droite {
+    
+    width: 45%;
+    height: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.cote_droit .droite .petite1 {
+    width: 100%;
+    height: 40%;
+}
+.cote_droit .droite .petite2 {
+    width: 100%;
+    height: 30%;
+}
+.cote_droit .droite .petite3 {
+    width: 100%;
+    height: 25%;
+}
+.cote_droit .long {
+    height: 30%;
+}
+.flexbox h1 {
+    display: block;
+    margin: 2px;
+    font-size: 1.5em;
+    color: white;
+    font-weight: bolder;
+    font-family: Nabla;
 }
