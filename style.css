@@ -69,7 +69,7 @@ img:hover {
 }
 form {
     width: 10px;
-    position: absolute;
+    /* position: absolute; */
 }
 
 fieldset {
@@ -413,4 +413,12 @@ fieldset {
     color: white;
     font-weight: bolder;
     font-family: Nabla;
+}
+
+/* exercice minuteur */
+
+#minuteur {
+    font-size: 6em;
+    font-family: Nabla;
+    letter-spacing: 50px;
 }
