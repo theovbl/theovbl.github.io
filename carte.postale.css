@@ -1,0 +1,108 @@
+body {
+   background-color: blueviolet;
+}
+
+.carte {
+   background-color: cornsilk;
+   position: relative;
+   border: 2px solid black;
+   width: 700px;
+   height: 400px;
+   box-shadow: 5px 4px 5px black; /* Pour faire un effet 3d */
+}
+
+.separateur {
+   position: absolute; /* Il est décollé de la page pour ne toucher aucun autre élément */
+   /* La position absolute dit à notre élément de ce décoller
+    de la page pour bousculer aucun élément et pouvoir le 
+    déplacer comme on le souhaite */
+   height: 350px;
+   left: 400px;
+   top: 30px; /*Pour aggrabdir de bas en haut */
+   border-left: 3px solid black;
+}
+
+/*Position relative c'est quand il est collé à la page */
+.timbre {
+   position: relative;
+   left: 590px;
+   top: 10px;
+   width: 85px;
+   height: 100px;
+   border: 1px solid black;
+}
+
+.timbre img {
+   position: relative;
+   right: 12px;
+   width: 110px;
+   height: 100px;
+}
+
+.texte {
+   position: absolute;
+   text-align: justify; /* Pour justifier un texte et que ça soit bien aligné en fin de ligne */
+   margin: 15px;
+   height: 333px;
+   width: 370px;
+}
+
+/*On choisit tous les p qui ont la classe texte*/
+.texte p {
+   margin: 0;
+   font-size: 1.8em; /* Utiliser pour régler la taille de la police */
+   font-family: Ephesis, cursive;
+}
+
+img[alt="Tampon"] {   /*On choit l'image qui à la classe tampon */
+   position: absolute;
+   width: 93px;
+   right: 145px;
+   top: 5px; /* En hauteur pour déplacer l'image */
+   transform: rotate(20deg); /*Pour faire une rotation de l'image */
+}
+
+.tampon {
+   transform: rotate(20deg);
+   position: absolute;
+   right: 140px;
+   top: 26px;
+   font-weight: bolder; /* On donne du gras au texte */
+}
+
+img[alt="Obliteration"] {
+   position: absolute;
+   width: 110px;
+   right: 45px;
+   top: 46px;
+}
+
+.information {
+   position: absolute;
+   left: 455px;
+   top: 135px;
+}
+.information p {
+   font-family: Ephesis, cursive;
+   text-align: justify;
+   font-size: 1.4em;
+   font-weight: bolder;
+   width: 200px;
+   border-bottom: 1px solid black; /* Avec la fonction border bottom les traits sont apparus juste en dessous 
+   de Jean philipe smet */ 
+}
+
+.copyright {
+   position: absolute;
+   bottom: 7px;
+   left: 40px;       /*gauche*/
+   padding: 10px;
+   font-size: 0.8em;
+   font-style: italic;
+   
+}
+.copyright a {
+   text-decoration: none;
+   color: black;
+   border-radius: 1px;
+}
