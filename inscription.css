@@ -1,14 +1,11 @@
-.entrez {
-    width: 90px;
-    height: 20px;
+input:required:valid {
+    outline: none;
+    border-color: chartreuse;
 }
-body {
-    background-color: blue;
-}
-.formulaire {
-    position: absolute;
-    top: 10px;
-    border: transparent;
-    top: 500px;
-  
+
+
+
+input:required:invalid {
+    outline: none;
+    border-color: red;
 }

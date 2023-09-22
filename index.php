@@ -37,7 +37,7 @@ require_once('db.php');
     Associatif
     Null => NULL */
     echo $phrase;
-    echo $titre;
+    //echo $titre;
 
 // Les conditions 
 
