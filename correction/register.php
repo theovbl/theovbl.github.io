@@ -1,5 +1,6 @@
 <?php
-require_once('./db.php')
+require_once('./db.php');
+require_once('./mail.php')
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -52,6 +53,10 @@ require_once('./db.php')
                 $_POST['genre'],
                 sha1($_POST['password'])
             ));
+            $token = GenerateToken(50);
+            $msg = "Lien pour réinitialiser votre mot de passe : http://localhost/cours_php/theovbl.github.io/correction/connexion/verify.php?id=" . $select[0]['id'] . "&token=$token";
+            SendEmail($_POST['email'], $msg, "Validation Adresse Mail", 'DWWM');
+
             header("Location: login.php");
         }else 
         echo '<script> alert("Ce pseudo est déja utilisé donc vous devez en utiliser un autre qui ne soit pas le même mais qui ne comport pas de caractère spécial parce que ca ne peux pas fonctionner et donc si vous ne faite pas ca ne pourra toujours pas fonctioner parce que vous êtes vraiment nul !") </script>';

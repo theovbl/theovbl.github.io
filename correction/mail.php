@@ -3,7 +3,7 @@
 require "./PHPMailer/PHPMailerAutoload.php";
 /** 
  * Cette fonction créer un token unique
- * @param int @length
+ * @param int $length
  * @return string
  */
 function GenerateToken($length) { // 10
@@ -11,39 +11,44 @@ function GenerateToken($length) { // 10
     return substr(str_shuffle(str_repeat($token, $length)), 0, $length);
 }
 
-function SendEmail($id, $token, $email) {
-    function smtpmailer($to, $from, $from_name, $subject, $body) {
-        $mail = new PHPMailer();        
+/**
+ * Fonction envoie de mail
+ * @param string $email
+ * @param string $msg
+ * @param string $objet
+ * @param string $name
+ * @return void
+ */
+function SendEmail($email, $msg, $objet, $name) {
+    $from = 'dwwm.auboue@hotmail.com';
 
-        $mail->isSMTP();
-        $mail->SMTPAuth = true;
+    $mail = new PHPMailer();        
 
-        $mail->Host = 'smtp-mail.outlook.com';
-        $mail->Port = 587;   
-        $mail->SMTPSecure = 'tls';    
+    $mail->isSMTP();
+    $mail->SMTPAuth = true;
 
-        $mail->Username = $from;
-        $mail->Password = 'DWWMauboue';
+    $mail->Host = 'smtp-mail.outlook.com';
+    $mail->Port = 587;   
+    $mail->SMTPSecure = 'tls';    
 
-        $mail->isHTML();
-        $mail->From = $from;
-        $mail->FromName = $from_name;
-        $mail->Sender = $from;
-        $mail->addReplyTo($from, $from_name);
-        $mail->CharSet = 'utf-8';
-        $mail->Subject = $subject;
-        $mail->Body = $body;
-        $mail->addAddress($to);
+    $mail->Username = $from;
+    $mail->Password = 'DWWMauboue';
 
-        if (!$mail->Send()) {
-            echo "Le mail ne c'est pas envoyé ressayer plus tard";
-        } else {
-            echo "Le mail c'est envoyé avec succés";
-        }
+    $mail->isHTML();
+    $mail->From = $from;
+    $mail->FromName = $name;
+    $mail->Sender = $from;
+    $mail->addReplyTo($from, $name);
+    $mail->CharSet = 'utf-8';
+    $mail->Subject = $objet;
+    $mail->Body = $msg;
+    $mail->addAddress($email);
 
+    if (!$mail->Send()) {
+        echo "Le mail ne c'est pas envoyé ressayer plus tard";
+    } else {
+        echo "Le mail c'est envoyé avec succés";
     }
-    $msg = "Lien pour réinitialiser votre mot de passe : http://localhost/cours_php/theovbl.github.io/exo/connexion/reset.php?id=$id&token=$token";  
-    smtpmailer($email, 'dwwm.auboue@hotmail.com', 'Renitialiser le mot de passe', "renitialiser le mot de passe", $msg);                               
 }
 
 

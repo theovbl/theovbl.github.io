@@ -12,20 +12,21 @@ require_once('db.php')
 <body>
       <a href="accueil.php">Accueil</a>
       <a href="connexion.php">Connexion :</a>
+     
 
-     <form action="" method="post">
+     <form action="accueil.php" method="post">
         <pre>
         <label for="prenom">Prenom :</label>
         <input type="text" name="prenom" id="prenom" required>
-        <label for="lastname">Nom :</label>
-        <input type="text" name="lastname" id="lastname" required>
+        <label for="nom">Nom :</label>
+        <input type="text" name="nom" id="nom" required>
         <label for="pseudo">Pseudo :</label>
         <input type="text" name="pseudo" id="pseudo" required>
         <label for="date">date de naissance:</label>
-        <input type="text" name="date" id="date" required maxlength=12>
+        <input type="date" name="date" id="date" required maxlength=12>
         <label for="numero">numéro de téléphone :</label>
-        <input type="number" name="number" id="number" required maxlength=8>
-        <label for="date">Adresse :</label>
+        <input type="tel" name="numero" id="numero" required maxlength=8>
+        <label for="adresse">Adresse :</label>
         <input type="text" name="adresse" id="adresse" required>
         <label for="password">mot de passe</label>
         <input type="password" name="password" id="password" required maxlength=8>
@@ -34,29 +35,30 @@ require_once('db.php')
         <br>
         <input type="submit" value="Inscription!">
         </pre>
-        </form>     
+        </form>    
 <?php
 if (isset($_POST) && !empty($_POST)) { 
-    
-    $select = $bdd->prepare('SELECT * FROM inscription WHERE pseudo=?');
+    $select = $bdd->prepare('SELECT * FROM inscription WHERE pseudo = ?');
     $select->execute(array( $_POST['pseudo']));
     $select = $select->fetchAll();
     if (count($select) <= 0) {  
-        $insert = $bdd->prepare('INSERT INTO inscription(prenom, nom, pseudo, date, numero, adresse, password) VALUES (?, ?, ?, ?, ?, ?, ?)');
+        $insert = $bdd->prepare('INSERT INTO inscription(prenom, nom, pseudo, date, numero, adresse, password) VALUE(?, ?, ?, ?, ?, ?, ?)');
         $insert->execute(array(
             $_POST['prenom'],
-              $_POST['nom'],
+            $_POST['nom'],
             $_POST['pseudo'],
             $_POST['date'],
             $_POST['numero'],
             $_POST['adresse'],
-             sha1($_POST['password']),
+            password_hash($_POST['password'])
             ));
-            }
+            header("Location: accueil.php");
+            exit ;
         } else { 
             echo "<script> alert('Le nom d\'utilisateur est déjà utilisé') </script>";
         } 
-    ?>
+    }
+ ?>
      <script>
         function modifyPassword() {
             let password = document.getElementById('password')
@@ -71,3 +73,6 @@ if (isset($_POST) && !empty($_POST)) {
     </script>
 </body>
 </html>
+
+
+
