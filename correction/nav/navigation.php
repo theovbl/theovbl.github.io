@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Document</title>
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script> <!-- On va chercher ceci dans boxicon au niveau de usage, ceci va nous permettre d'insérer des images-->
-    <link rel="stylesheet" href="../nav/navigation.css">
+    <link rel="stylesheet" href="../correction/nav/navigation.css">
 </head>
 <body>
     <nav>
