@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Document</title>
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script> <!-- On va chercher ceci dans boxicon au niveau de usage, ceci va nous permettre d'insérer des images-->
-    <link rel="stylesheet" href="../correction/nav/navigation.css">
+    <link rel="stylesheet" href="../nav/navigation.css">
 </head>
 <body>
     <nav>
@@ -23,17 +23,15 @@
     </nav>
     <box-icon name='sushi' animation='tada'></box-icon> <!-- On est allé chercher l'image sur boxicon-->
 
-
-    <nav class="exercice">
-        <u1>
-            <li>Home</li>
-            <li>About</li>
-            <li>Contact</li>
-            <li>Support</li>
-            <li>|</li>
-            <li><box-icon name='search'></box-icon></li>
-</u1>
-
+<br><br><br><br><br><br>
+<nav class="exo">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Support</a></li>
+            <li><a href="#"><span id="search"></span><box-icon name='search' color="#fff"></box-icon></a></li>
+        </ul>
     </nav>
 </body>
 </html>
