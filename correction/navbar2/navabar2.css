@@ -1,0 +1,43 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: black;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    position: fixed; /* Permet de fixer la nav bar */
+    top: 0; right: 0; left: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: space-between;
+    width: 25%;
+}
+
+nav div {
+    display: flex;
+    align-items: center;
+}
+span {
+    margin-left: 5px;
+}
+box-icon[name='menu'] {
+    display: none;
+}
+@media screen and (max-width: 950px) {
+    nav ul {
+        display: none; /* On fait disparaitre about/ services/ testimonials */
+    }
+    box-icon[name='menu'] {
+        display: contents; /* Contents, initial, inline pour faire apparaitre le menu */
+    }
+}

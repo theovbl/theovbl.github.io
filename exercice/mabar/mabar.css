@@ -1,0 +1,33 @@
+
+.exo li a {
+   text-decoration-line: none;
+    color: black;
+    font-size:0,4em;
+}
+.exo ul {
+   
+    list-style-type:none;
+}
+
+
+body {
+    background: linear-gradient(90deg,#EF1887, #842FC1);
+    width: auto;
+}
+.exo ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.exo {
+    position: relative;
+    background:wheat;
+    width: 1500px;
+    margin: 0 auto 0 auto;
+    border-radius: 50px;
+    
+}
+.exo li {
+    margin: 25px;
+}
