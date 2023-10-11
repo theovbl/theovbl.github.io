@@ -13,7 +13,7 @@ session_start();
     <title>gestion du stock</title>
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
    
-    <link rel="stylesheet" href="../sitechat/sitechat.css">
+    <link rel="stylesheet" href="../chat/sitechat.css">
 </head>
 <body>
 <nav>
@@ -22,7 +22,7 @@ session_start();
         <ul>
            
             <li><a href="">Nos Enseignes </a></li>
-            <li><a href="../sitechat/gerant.php">Espace Gérant </a></li>
+            <li><a href="../chat/client.php">Espace Client </a></li>
             
            
         </ul>
@@ -56,10 +56,10 @@ if (isset($_POST) && !empty($_POST)) {
 
 ?><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
+<br><br><br><br><br><br><br><br><br>
 
 
-
-
+<br><br><br><br><br><br><br><br>
 
 
 

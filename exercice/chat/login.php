@@ -4,30 +4,28 @@ session_start();
 
 
 ?>
-
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>gestion du stock</title>
+    <title>Connexion</title>
+    <link rel="stylesheet" href="../chat/sitechat.css">
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
-   
-    <link rel="stylesheet" href="../sitechat/sitechat.css">
 </head>
 <body>
 <nav>
-        <span>
+     <span>
             <box-icon type='solid' name='cat' animation='spin' size='40px'></box-icon>Le Bar à Chat</span> 
         <ul>
-           
+            <li><a href="../chat/register.php">Inscription </a></li>
             <li><a href="">Nos Enseignes </a></li>
-            <li><a href="../sitechat/gerant.php">Espace Gérant </a></li>
-            
+            <li><a href="../chat/gerant.php">Espace Gérant </a></li>
+            <li><a href="../chat/caissier.php">Espace caissier </a></li>
+            <li><a href="../chat/client.php">Espace client</a></li>        
            
         </ul>
-       
-    </nav> <br><br><br><br><br><br><br><br><br><br>
+    </nav>
+    <br><br><br><br><br><br><br><br><br><br><br><br>
     <form action="" method="post">
         <pre>
             <label for="username">Pseudo :</label>
@@ -48,22 +46,15 @@ if (isset($_POST) && !empty($_POST)) {
     $select = $select->fetch(PDO::FETCH_ASSOC);
     if (!empty($select)) {
         $_SESSION = $select;
-        header('Location: rgerant.php');
+        header('Location: index.php');
     } else {
         echo "<script> alert('Le mot de passe ou le pseudo n'est pas bon') </script>";
     }
 }
+?>
 
-?><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-
-
-
-
-
-
-
-
-    <footer>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<footer>
 
 <div class="logo">
         <div>

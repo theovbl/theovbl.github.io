@@ -1,13 +1,13 @@
 <?php
 session_start();
-if (empty($_SESSION)) header('Location: index.php');
+if (empty($_SESSION)) header('Location: rcaissier.php');
 ?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <title>Page D'accueil</title>
-    <link rel="stylesheet" href="../sitechat/sitechat.css">
+    <link rel="stylesheet" href="../chat/sitechat.css">
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 </head>
 <body>
@@ -15,11 +15,11 @@ if (empty($_SESSION)) header('Location: index.php');
      <span>
             <box-icon type='solid' name='cat' animation='spin' size='40px'></box-icon>Le Bar à Chat</span> 
         <ul>
-            <li><a href="../sitechat/register.php">Inscription </a></li>
+            
             <li><a href="">Nos Enseignes </a></li>
-            <li><a href="../sitechat/gerant.php">Espace Gérant </a></li>
-            <li><a href="../sitechat/caissier.php">Espace caissier </a></li>
-            <li><a href="../sitechat/client.php">Espace client</a></li>        
+          
+            <li><a href="../chat/caissier.php">Espace caissier </a></li>
+            <li> <a href="deconnexion.php" class="deco">Me déconnecter</a></li>
            
         </ul>
         
@@ -29,11 +29,43 @@ if (empty($_SESSION)) header('Location: index.php');
         <?php // var_dump($_SESSION); ?>
     </pre> -->
     <h1 class="user"> Bonjour, <?php echo $_SESSION['username'] ?> </h1>
-    <!-- 
-        Vous allez devoir créer trois page une de connexion, une d'inscription et un page d'accueil avec des 
-        lien hypertext et si possible réussir à faire afficher le nom et prénom de la personne 
-    -->
-    <a href="deconnexion.php" class="deco">Se Déconnecter</a>
+    <p>Vous trouverez votre gestion de stock pour vos chats</p>
+
+    <form action="" method="POST">
+    <pre>
+    <label for="name">Nom du chat : </label>
+    <input type="text" required> <br>
+    <label for="name">Ajouté une resérvation :</label>
+    <input type="date" name="quantity" required><br>
+    <label for="name">Modifié les horraires de réservation :</label><br>
+    
+         <button> Cliquez ici !</button></pre>
+   </form>
+
+<?php
+
+
+
+
+
+if (isset($_POST) && !empty($_POST)){
+$insert = $bdd->prepare('INSERT INTO stock(reservation) VALUE (?);');
+         $insert->execute(array(
+            $_POST['reservation'],)
+           
+        );
+
+// Execute the query
+if ($insert->rowCount()) {
+    echo "Vous avez ajouté une réservation de chat!";
+} else {
+    echo "Error: " ; 
+}
+}
+?>
+
+
+?>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <footer>
 

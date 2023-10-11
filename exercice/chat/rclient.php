@@ -7,7 +7,7 @@ if (empty($_SESSION)) header('Location: rclient.php');
 <head>
     <meta charset="UTF-8">
     <title>Page D'accueil</title>
-    <link rel="stylesheet" href="../sitechat/sitechat.css">
+    <link rel="stylesheet" href="../chat/sitechat.css">
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 </head>
 <body>
@@ -17,7 +17,7 @@ if (empty($_SESSION)) header('Location: rclient.php');
         <ul>
           
             <li><a href="">Nos Enseignes </a></li>
-            <li><a href="../sitechat/gerant.php">Espace Gérant </a></li>
+            <li><a href="../chat/gerant.php">Espace Gérant </a></li>
            <li> <a href="deconnexion.php" class="deco">Me déconnecter</a></li>
            
         </ul>
@@ -136,7 +136,7 @@ print'</div>';
   
 
   </div>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 <footer>
 

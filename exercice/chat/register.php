@@ -8,18 +8,21 @@ require_once('./db.php');
     <meta charset="UTF-8">
     <title>Inscription</title>
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
-    <link rel="stylesheet" href="../sitechat/sitechat.css">
+    <link rel="stylesheet" href="../chat/sitechat.css">
 </head>
 <body>
+<?php 
+    $_GET['page'] = 'register';
+    include 'inc/header.php'; ?>
      <nav>
         <span>
             <box-icon type='solid' name='cat' animation='spin' size='40px'></box-icon>Le Bar à Chat</span> 
         <ul>
-            <li><a href="../sitechat/register.php">Inscription </a></li>
+            <li><a href="../chat/register.php">Inscription </a></li>
             <li><a href="">Nos Enseignes </a></li>
-            <li><a href="../sitechat/gerant.php">Espace Gérant </a></li>
-            <li><a href="../sitechat/caissier.php">Espace caissier </a></li>
-            <li><a href="../sitechat/client.php">Espace client</a></li>        
+            <li><a href="../chat/gerant.php">Espace Gérant </a></li>
+            <li><a href="../chat/caissier.php">Espace caissier </a></li>
+            <li><a href="../chat/client.php">Espace client</a></li>        
            
         </ul>
     </nav>

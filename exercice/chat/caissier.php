@@ -4,16 +4,14 @@ session_start();
 
 
 ?>
-
-
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <title>gestion du stock</title>
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
    
-    <link rel="stylesheet" href="../sitechat/sitechat.css">
+    <link rel="stylesheet" href="../chat/sitechat.css">
 </head>
 <body>
 <nav>
@@ -22,12 +20,14 @@ session_start();
         <ul>
            
             <li><a href="">Nos Enseignes </a></li>
-            <li><a href="../sitechat/gerant.php">Espace Gérant </a></li>
+            <li><a href="../chat/caissier.php">Espace caissier </a></li>
             
            
         </ul>
        
     </nav> <br><br><br><br><br><br><br><br><br><br>
+
+ <br><br><br><br><br><br><br><br><br><br>
     <form action="" method="post">
         <pre>
             <label for="username">Pseudo :</label>
@@ -56,7 +56,7 @@ if (isset($_POST) && !empty($_POST)) {
 
 ?><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
-
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>br
 
 
 
