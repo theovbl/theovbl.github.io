@@ -24,7 +24,7 @@
             <box-icon name="x" type="icon" color="#fff"></box-icon>
         </div>
     </nav>
-    <script> 
+    <script> /*On va utiliser Jquery */
         $('#menu').click(function() { /* Click c'est quand tu cliques dessus */
             if ($('nav ul').is(':hidden')) { /*est caché*/
                 $('nav ul').css({'display': 'flex'})                
