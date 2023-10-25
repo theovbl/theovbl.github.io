@@ -2,27 +2,32 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-   <link rel="stylesheet" href="css.css">
-    <title>Index</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
 </head>
-
-
 <body>
-<nav>
-<span>Flexbox</span>
-        <ul>
-            <li><a href="Vues/audio.php">Audio</a></li>
-            <li><a href="Vues/video.php">Vidéo</a></li>
-            <li><a href="Vues/image.php">Image</a></li>
-        </ul>
-</nav>  
-<br><br><br><br><br><br><br><br>  
-<div class="index">
-    <br>
-La Balise &lt;a&gt;: Les liens hypertexte</p><br><br>
-<p><em>C'est avec l'attribut href que l'on indique le chemin vers le fichier voulu.</em></p><br>
-<p> &lt;a href="chemin_vers_fichier">intitulé du lien &lt;/a&gt; </p><br>
-</div>
+    <?php
+        include('inc/nav.php')
+    ?>
+    <div class='baliseA'>
+        <h2>La Balise <\a>: Les Liens Hypertexte</h2>
 
+        <p>C'est avec l'attribut href que l'on indique le chemin vers le fichier voulu.</p>
+
+        <h3><\a href="chemin_vers_fichier"> intitulé du lien <\/a></h3>
+    </div>
+<!--On a fait une div général puis 3 div à l'intérieur et les éléments à l'intérieur pour pouvoir les déplacer -->
+    <div class="forme-wtf">
+        <div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div></div>
+        <div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
 </body>
 </html>
