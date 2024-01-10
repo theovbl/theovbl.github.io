@@ -1,0 +1,61 @@
+.jeux {
+    background-color: green;
+    color: white;
+    align-items: end;
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.pays {
+    background-color: black;
+    color: white;
+    text-align: center;
+
+}
+
+tr, td, th, table {
+    border: 1px solid black;
+    border-spacing: 0px;
+    width: 900px;
+    height: 50px;
+   
+}
+
+.classement {
+    background-color: green;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    
+}
+
+.jaune {
+    background-color: yellow;
+}
+
+.table  {
+    width: 600px;
+    height: 1000px;
+    outline-offset: 10px;
+    
+}
+
+#gris:hover {
+    cursor: pointer;
+    background-color: gray;
+    color: white;
+
+}
+
+#bleu:hover {
+    cursor: pointer;
+    color: blue;
+    background-color: gray;
+}
+
+/* table tr td:last-child {
+    background-color: #FFD700;  avant dernier enfant de td 
+    font-weight: bold;       Donner du gras au texte 
+} */

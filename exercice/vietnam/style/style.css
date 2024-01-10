@@ -1,0 +1,101 @@
+body {
+background-image: url(https://images.ctfassets.net/rc3dlxapnu6k/3AWzMtHC0Qil33gcKT8uGv/9af73d9114c7d2331a7dc61c2699a920/iStock-1216347894.jpg?w=2121&h=1193&fl=progressive&q=50&fm=jpg);
+background-size: cover;
+height: auto;
+}
+
+
+nav {
+    position: fixed;
+    left: 0; right: 0; top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 30px;
+    
+    
+}
+
+nav span {
+    display: flex;
+    align-items: center;
+
+
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    justify-content: cente
+    
+}
+
+nav ul li {
+    margin: 0 0 0 50px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    border-right: 2px solid black;
+    padding-right: 20px;
+
+}
+
+div {
+    display: flex;
+    align-items: center;
+
+}
+
+.search {
+    border-radius: 15px;
+}
+
+input {
+    margin-left: 10px;
+}
+
+.vietnam {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 40%;
+    margin-left: 30px;
+}
+h1 {
+    color: #0617de;
+    font-size: 3em;
+}
+
+button {
+    background-color: #0617de;
+    border-radius: 10px;
+    font-size: 1.5em;
+    border: none;
+    color: white;
+    margin-bottom: 10px;
+}
+
+
+
+nav ul li:hover a {
+    color: white;
+    background-color: #0617de;
+    padding-top: 50px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-right: none;
+}
+
+.recherche {
+    margin-left: 45px;
+    position: absolute;
+}
+
+.white {
+    color: white;
+}
+
