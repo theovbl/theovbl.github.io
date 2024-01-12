@@ -1,0 +1,161 @@
+body {
+  
+   margin: 0;
+   padding: 0;
+   
+}
+
+nav {
+   position: fixed;
+   left: 0; right: 0; top: 0;
+   display: flex;
+   padding: 0 30px;
+   justify-content: flex-end;
+   background: linear-gradient(90deg, #748486 0%, #202d3a 100%);
+
+}
+
+nav ul {
+   display: flex;
+   list-style-type: none;
+   
+}
+
+nav ul li {
+   margin: 0 0 0 25px;
+   display: inline-block;
+  
+}
+
+nav ul li a {
+   text-decoration: underline;
+   color: white;
+   
+}
+
+
+h1 {
+   color: black;
+   text-decoration: underline;
+   margin-top: 80px;
+   text-align: center;
+}
+
+.police {
+   
+   text-align: center;
+
+}
+
+.contact {
+   display: flex;
+   flex-direction: column;
+   text-align: center;
+}
+.section {
+   display: flex;
+   flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.principal {
+   margin: 10px 80px;
+   position: relative;
+   display: inline-block;
+}
+
+.hidden  {
+   position: absolute;
+   text-align: center;
+   opacity: 0;
+   
+   bottom: 0px;
+  
+}
+
+.principal:hover .hidden {
+   opacity: 1;
+   
+}
+
+.principal:hover .image {
+   opacity: 0.2;
+}
+
+.cache {
+   font-size: 12px;
+   
+}
+
+footer {
+   background: linear-gradient(90deg, #5a5c6a 0%, #202d3a 100%);
+   width: 80%;
+   margin: 0 auto;
+   
+   
+}
+
+
+h3 {
+   padding-top: 20px;
+   text-align: center;
+   text-decoration: underline;
+   font-size: 2.5em;
+   color: white;
+}
+
+
+.taille-image {
+   width: 3%;
+}
+
+.c {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+
+form {
+   display: flex;
+   flex-direction: column;
+   width: 80%;
+   margin: 0 auto;
+}
+
+.position {
+   display: flex;
+   justify-content: space-between;
+  
+   
+}
+
+.nom {
+   display: flex;
+   flex-direction: column;
+   width: 45%;
+}
+
+.email {
+   display: flex;
+   flex-direction: column;
+   width: 45%;
+}
+
+button {
+   border-radius: 10px;
+   padding: 10px;
+}
+
+textarea {
+   border-radius: 10px;
+   background-color: white;
+   display: flex;
+}
+input {
+   border-radius: 5px;
+}
+label {
+   color: white;
+}
