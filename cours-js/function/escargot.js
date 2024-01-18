@@ -1,35 +1,28 @@
-// Faire un exercice qui détermine en combien de temps un escargot sortira d'un puit en sachant le profondeur du puit en cm
+// Faire une function qui détermine en combien de temps un escargot sortira d'un puit en sachant le profondeur du puit en cm
 // l'escargot avance de 7 cm chaque jour et recule de 2 cm chaque nuit
 
-// Exemple : 
+// Exemple : Puis de 32 cm
 // Jour 1 : 7  - 2     = 5 cm
 // Jour 2 : 5  + 7 - 2 = 10 cm
 // Jour 3 : 10 + 7 - 2 = 15 cm
 // Jour 4 : 15 + 7 - 2 = 20 cm
 // Jour 5 : 20 + 7 - 2 = 25 cm
-// Jour 6 : 25 + 7 - 2 = 32 cm
+// Jour 6 : 25 + 7 - 2 = 30 cm
+// Jour 7 : 30 + 7 - 2 = 35 cm
 
-let positionEscargot = 0;
-let jours = 0;
+function DistanceParcouruEscargot(profondeur) {
+    let distance = 0
+    let jour
 
-function deplacementEscargot(profondeurPuit) {
-    while (positionEscargot < profondeurPuit) {
-        jours++;
-        positionEscargot += 7; // avance de 7 cm le jour
-        if (positionEscargot >= profondeurPuit) {
-            break;
-        }
-        positionEscargot -= 2; // recule de 2 cm la nuit
+    for (jour = 0; distance <= profondeur; jour++) {  
+        // Jour 1 : la distance s'affiche que si elle n'est pas égal à 0 sinon il n'affiche rien puis 7 - 2 = au resultat
+        console.log(`Jour ${jour+1} : ${distance == 0 ? '' : (distance + ' + ')}7 - 2 = ${distance+7-2} `)
+        distance += 7 - 2
     }
-    return jours;
+
+    return `L'escargot mettera ${jour} jour pour sortir du puit` 
 }
-// Exemple d'utilisation avec une profondeur de puit de 32 cm
-let profondeurPuit = 2000;
-let joursNecessaires = deplacementEscargot(profondeurPuit);
-
-// Affichage du résultat
-console.log(`Il faut ${joursNecessaires} jours pour que l'escargot sorte du puit.`);
 
 
-
+console.log(DistanceParcouruEscargot(32))
 
