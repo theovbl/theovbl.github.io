@@ -1,5 +1,4 @@
 
-
 // Vous devrez créer un tableau avec dix éléments. Ce tableau devra être 
 // stocké dans une variable intitulée MonTableau.
 // Les éléments du tableau peuvent être n'importe quoi vos plats ou vos 
