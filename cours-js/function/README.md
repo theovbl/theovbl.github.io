@@ -356,7 +356,8 @@ Permet de filtrer un tableau, renvoi uniquement les éléments demander
 
 Exemple : 
 ```js
-
+TableauExemple.filter(Number.isInteger) //  Me renvoie que les chiffres entier
+TableauExemple.filter((valeur) => valeur > 10) // Me renvoie tout les chiffre au dessus de 10
 ```
 
 ## map()
@@ -365,6 +366,25 @@ Permet de transformer chaque éléments d'un tableau en une autre chose
 Exemple : 
 ```js
 
+```
+
+## includes 
+Renvoie vrai si il trouve l'argument demander dans le tableau ou chaine de caractère sinon il renvoie faux si il ne trouve pas 
+Exemple : 
+```js
+var Texte = "J'ai manger un kiwi et maintenant il est absant"
+console.log(Texte.includes('et')) // Me renvoie true
+console.log(Texte.includes('mangue')) // Me renvoie false
+```
+
+## find
+Retourne la lettre si il l'a trouve dans un tableau ou une chaine de caractère sinon il retourne undefined
+Exemple :
+```js
+var Texte = "J'ai manger un kiwi et maintenant il est absant"
+var TableauTexte = Texte.split('')
+console.log(TableauTexte.find((Lettre => Lettre == 'et'))) // Me renvoie 'et'
+console.log(TableauTexte.find('mangue')) // Me renvoie undefined
 ```
 
 # Fonction JavaScript
@@ -543,4 +563,39 @@ function MaFonction2(texte) {
 console.log(MaFonction2('Bonjour')) // Ici j'appel MaFonction2 avec un paramètre et elle me renvoie son code executer
 // Me renvoie 'Bonjour'
 ```
+
+# Document HTML
+
+Pour pouvoir modifié des éléments en HTML on posséde un DOM (Document Object Model) (Modèle d'objet de document) qui contient toute les
+informations de la page internet et cella nous permet de pouvoir tout modifier comme on le souhaite
+Pour pouvoir utiliser le DOM tout est stocket dans une variable qui ce nomme :
+## document
+Exemple : 
+```js
+console.log(document.body) // Me renvoie l'élément body de ma page qui est stocker dans le DOM
+```
+
+### getElementById
+Permet de récupérer un élément HTML en utilisant son id. En récupérant l'élément il est possible de la modifier comme on le souhaite
+Exemple : 
+```js
+let monDiv = document.getElementById("monId") // Récupère l'élement en utiliser l'id monId et le stocke dans la variable monDiv
+```
+#### 
+
+### getElementsByClassName 
+Cela me permettra de selectionner plusieurs éléments en utilisant leur class. ATTENTION CETTE FONCTION RENVOIE UN TABLEAU D'ELEMENT
+Exemple : 
+```js
+let MonP = document.getElementsByClassName("paragraphe") // Récupère tout les éléments qui posséde la class paragraphe
+``` 
+
+### getElementsByTagName
+Permet de récupérer plusieurs éléments en utilisant leur balise. ATTENTION CETTE FONCTION RENVOIE UN TABLEAU D'ELEMENT
+Exemple : 
+```js
+let MonSpan = document.getElementsByTagName("span") // Récupère toute les balise span
+``` 
+
+
 
