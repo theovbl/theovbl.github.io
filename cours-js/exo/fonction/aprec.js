@@ -21,9 +21,8 @@ function Remarque(note) {
 }
 console.log(Remarque(11))
 
-// Faire une boucle qui affiche 10, 20, 30, ...., 90
-
 // Faire une boucle qui affiche 10, 20, 30, ...., 100
 for (let i = 10; i <= 100; i += 10) {
-    console.log(i) 
+    console.log(i)
 }
+

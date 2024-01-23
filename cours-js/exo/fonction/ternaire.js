@@ -1,16 +1,15 @@
-// Avec deux nombres, retournez TRUE si la somme des deux nombres 
-// est inférieure à 100. Sinon, retournez FALSE.
+// Déclarer et définir 2 variables misteryNumber et myNumber 
+// de type number.
+// En utilisant uniquement l'opérateur ternaire, on affiche :
 
-// Exemple:
-// check(5, 20) ➞ true
-// // 5 + 20 = 25
+//     Si les 2 nombres sont égaux Congratulations !
+//     Sinon
+//         Si le nombre myNumber est inférieur au nombre 
+//          misteryNumber, on affiche +
+//         Sinon on affiche -
+// nombre < 0 ? 'if' : 'else' 
 
-// check(60, 55) ➞ false
-// // 60 + 55 = 115
+var misteryNumber = 2
+var myNumber = 5;
 
-function check(a, b) {
-    return a + b < 100;
-}
-
-console.log(check(5, 20));
-console.log(check(60, 55));
+console.log( misteryNumber == myNumber ? 'Congratulations !' : misteryNumber > myNumber ? '+' : '-')
