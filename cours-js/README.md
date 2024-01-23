@@ -661,6 +661,9 @@ var MaBoite = new Object;
 MaBoite.MaFonction = function() {
     alert ("Je suis une fonction");
 }
+MaBoite.MaFonctionFléchée = () => {
+    alert ("Je suis une fonction");
+}
 // J'ai créer une fonction qui ce nomme MaFonction qui ce trouve
 // dans la boite MaBoite 
 ```
@@ -703,6 +706,12 @@ var Véronique = new MaFonctionObjet('Véronique', 'fomme', 1990, 'Trop conne')
 console.log(Véronique.CeCaractere) // Me retourne Trop conne
 ```
 
+### Le this 
+On l'a légérement vu il veux dire ceci donc dans notre cas il veux dire dans cette fonction 
+le but du this est de dire au variable que je vais mettre juste après lui séparer d'un point 
+est de dire je vais créer une variable dans cette fonction elle y sera local mais pourra être réutilisé 
+dans des objets distinct
+
 ### Interdire la modification de certaine propriété 
 Il est possible pouvoir interdire de modifier les propriété d'une fonction orienté objet
 Exemple : 
@@ -721,5 +730,7 @@ function MaFonctionInterdite(transmetteur, receveur, message, date){
     }
 }
 var Kévin = new MaFonctionInterdite("Didi", 'Kévin', "Tu viens au PMU ?", '15:00:00-22-01-2024')
+console.log(Kévin.getTransmetteur()) // Me retourne Didi
+Kévin.LeMessage = "Tu viens à l'apero ?"
 ```
 
