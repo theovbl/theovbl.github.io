@@ -10,7 +10,7 @@ function chrono() {
 
     milisecond++
 
-    if (milisecond == 1000) { //1000 car il faut 1000 pour atteindre 1s
+    if (milisecond == 1000) {
         milisecond = 0
         seconde++
     } 

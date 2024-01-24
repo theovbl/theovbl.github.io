@@ -5,7 +5,7 @@ function isPalindrome(str) {
 function TestePalindrome() {
     let Input = document.getElementById("input").value;
     let Affichage = document.getElementById('texte')
-
+    console.log(Affichage)
     if (Input.length <= 0) {
         Affichage.textContent = "Ecris un mot enculéwu"
         Affichage.style.color = "chartreuse"
