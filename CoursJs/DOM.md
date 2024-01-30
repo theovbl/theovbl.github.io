@@ -1,23 +1,27 @@
 [Retour](https://github.com/TamakiYagami/Cours/tree/main/CoursJS)
-# -B Document HTML
+
+# Document HTML
 
 Pour pouvoir modifié des éléments en HTML on possède un DOM (Document Object Model) (Modèle d'objet de document) qui contient toute les
 informations de la page internet et cella nous permet de pouvoir tout modifier comme on le souhaite
 Pour pouvoir utiliser le DOM tout est stocker dans une variable qui ce nomme :
-## -B document
+## document
 Exemple : 
 ```js
 console.log(document.body) // Me renvoie l'élément body de ma page qui est stocker dans le DOM
 ```
 
-### -B getElementById
+### getElementById
 Permet de récupérer un élément HTML en utilisant son id. En récupérant l'élément il est possible de la modifier comme on le souhaite
 Exemple : 
 ```js
 let monDiv = document.getElementById("monId") // Récupère l’élément en utiliser l'id monId et le stocke dans la variable monDiv
 ```
-#### -B innerHTML / textContent
+#### innerHTML / textContent
 Les deux permettent de modifier le texte contenu dans les balises sélectionner
+Il faut faire attention si on met le textContent et que on met une balise HTML elle sera prise en texte et pas en balise alors
+que le innerHTML prendera la balise
+
 Exemple :
 ```js
 let MonP = document.getElementById("monId")
@@ -26,7 +30,7 @@ MonP.innerHTML = "Ceci est un test"
 MonP.textContent = "Ceci est un test"
 ```
 
-#### -B style
+#### style
 Permet de modifier le style de l'élément sélectionner
 Toute les modifications de style possible en JS (https://www.w3schools.com/jsref/dom_obj_style.asp)
 Exemple :
@@ -35,7 +39,7 @@ let MonP = document.getElementById("monId")
 MonP.style.fontSize = "10em" // J'agrandi la taille du texte
 ```
 
-#### -B addEventListener
+#### addEventListener
 C'est une fonction qui permet de créer une écoute d’événement bien précis
 Elle prend 2 arguments : L'événement que vous voulez écouter et La
 fonction à exécuter lorsque cet événement se déclenche
@@ -49,14 +53,14 @@ MonBouton.addEventListener('click', function() {
 })
 ```
 
-### -B getElementsByClassName 
+### getElementsByClassName 
 Cela me permettra de sélectionner plusieurs éléments en utilisant leur class. ATTENTION CETTE FONCTION RENVOIE UN TABLEAU D'ELEMENT
 Exemple : 
 ```js
 let MonP = document.getElementsByClassName("paragraphe") // Récupère tout les éléments qui possède la class paragraphe
 ``` 
 
-### -B getElementsByTagName
+### getElementsByTagName
 Permet de récupérer plusieurs éléments en utilisant leur balise. ATTENTION CETTE FONCTION RENVOIE UN TABLEAU D'ELEMENT
 Exemple : 
 ```js

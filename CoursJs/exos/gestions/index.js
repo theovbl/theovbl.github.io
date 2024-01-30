@@ -27,7 +27,9 @@ function Tache(title, description) {
     this.etat = "En cours"
 
     this.afficherDetails = function() {
-        console.log(`Tache : ${this.Title}, Description : ${this.Description}, Etat : ${this.etat}`)
+        let Phrase = `Tache : ${this.Title}, Description : ${this.Description}, Etat : ${this.etat}`
+        console.log(Phrase)
+        return Phrase
     }
 
     this.terminer = function() {
@@ -49,10 +51,13 @@ function Projet() {
     }
 
     this.afficherTaches = function() {
+        let Phrase = []
         this.listeDeTaches.forEach((tache) => {
-            tache.afficherDetails()
+            Phrase.push(tache.afficherDetails() + ` <button type="button">Terminer</button> <button type="button">Annulée</button>`)
             console.log('---------------------------------')
+            
         })
+        return Phrase.join('<br><br>')
     }
 
 }
@@ -68,3 +73,24 @@ projet.ajouterTache(NewSiteWeb);
 projet.ajouterTache(MisePage)
 projet.ajouterTache(new Tache("Création d'animation", "En CSS ou en JavaScript"))
 projet.afficherTaches()
+
+
+function CreateTache() {
+    let titre = document.getElementById('titre');
+    let description = document.getElementById('description');
+    if (titre != "" && description != ""){
+        let nouvelleTache = new Tache(titre.value, description.value);
+        ////
+        projet.ajouterTache(nouvelleTache)
+        // OU
+        // projet.ajouterTache(new Tache(titre.value, description.value))
+        ////
+    }
+    titre = ""
+    description = ""
+}
+
+function ViewTaches() {
+    document.getElementById('afficher').innerHTML = projet.afficherTaches()  
+    projet.afficherTaches()
+}
