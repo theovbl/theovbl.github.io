@@ -4,6 +4,7 @@
 //    - Titre
 //    - Description
 //    - État (en cours, terminée, annulée)
+//    -Par défaut Etat est en cours
 
 // 2. Ajoutez des méthodes à l'objet "Tache" :
 //    - Une méthode "afficherDetails" qui affiche le titre, la description et l'état de la tâche.

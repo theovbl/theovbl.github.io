@@ -1,5 +1,6 @@
 [Retour](https://github.com/TamakiYagami/Cours/tree/main/CoursJS)
-# -B Orienté Objet
+
+# Orienté Objet
 La programmation orienté objet en JS permet de classé de façon propre son code et de pouvoir le réutilisé comme on le veux à la demande 
 Une classe est une énorme boite
 Un objet est une petite boite
@@ -10,20 +11,20 @@ Un objet est une petite boite
 - Les objets ont accès aux propriétés et méthodes définies dans leur classe
 parente. Elles peuvent également avoir leurs propres propriétés et méthodes.
 
-## -B Création simple d'un objet
+## Création simple d'un objet
 Un objet est créé avec l'instruction `new Object()`
 ```js
 var MaBoite = new Object;
 // Mon objet est créer mais vide
 ```
-### -B Création de variable dans mon objet
+### Création de variable dans mon objet
 ```js
 var MaBoite = new Object;
 MaBoite.MaVariable = "Ok mec"
 // J'ai créer une Variable qui ce nomme MaVariable dans mon objet et elle contient la chaîne de caractère
 // Ok mec
 ```
-### -B Création d'une fonction dans mon objet
+### Création d'une fonction dans mon objet
 ```js
 var MaBoite = new Object;
 MaBoite.MaFonction = function() {
@@ -35,13 +36,13 @@ MaBoite.MaFonctionFléchée = () => {
 // J'ai créer une fonction qui ce nomme MaFonction qui ce trouve
 // dans la boite MaBoite 
 ```
-### -B Appelé une fonction qui ce trouve dans mon objet
+### Appelé une fonction qui ce trouve dans mon objet
 ```js
 MaBoite.MaFonction()
 // J’appelle la fonction MaFonction qui ce trouve dans MaBoite
 ```
 
-## -B Création d'un littéral objet 
+## Création d'un littéral objet 
 Cela permet de décrire plus rapidement qu'avec l'instruction `new Object()`. On utilise `{ }` pour délimiter les paires clé/valeur
 NE FONCTION PAS DANS LES ANCIENS NAVIGATEUR (Internet Explorer)
 Attention a ne pas confondre avec un tableau associatif
@@ -57,7 +58,7 @@ var MaBoiteLitteral = {
 MaBoiteLitteral.MaFonction()
 ```
 
-## -B Utilisation des fonction comme objet
+## Utilisation des fonction comme objet
 Une fonction peux être utiliser comme un objet 
 Exemple : 
 ```js
@@ -74,13 +75,13 @@ var Véronique = new MaFonctionObjet('Véronique', 'fomme', 1990, 'Trop conne')
 console.log(Véronique.CeCaractere) // Me retourne Trop conne
 ```
 
-### -B Le this 
+### Le this 
 On l'a légèrement vu il veux dire ceci donc dans notre cas il veux dire dans cette fonction 
 le but du this est de dire au variable que je vais mettre juste après lui séparer d'un point 
 est de dire je vais créer une variable dans cette fonction elle y sera local mais pourra être réutilisé 
 dans des objets distinct
 
-### -B Interdire la modification de certaine propriété 
+### Interdire la modification de certaine propriété 
 Il est possible pouvoir interdire de modifier les propriété d'une fonction orienté objet
 Exemple : 
 ```js
@@ -106,7 +107,7 @@ Kévin.setDate(15:00:00-23-01-2024) // Je re défini Date
 Kévin.LeMessage = "Tu viens à l’apéro ?"
 ```
 
-### -B Système d'héritage
+### Système d'héritage
 Le système d'héritage sert à récupérer des variables, des fonctions et tout ce qu'il s'y trouve dans 
 un autre objet
 Exemple : 
@@ -131,7 +132,7 @@ function Etudiant(fiche, note) {
 }
 ```
 
-### -B Objet Conditionnelle 
+### Objet Conditionnelle 
 Un objet conditionnelle est un objet ou va lui demander si il existe avant d'être utiliser
 Exemple : 
 ```js
@@ -155,7 +156,7 @@ console.log(EleveB?.Matiere?.math ?? "Absent") // me renvoie Absent
 console.log(EleveA?.Matiere?.math ?? "Absent") // me renvoie 10
 ```
 
-### -B Suppresion de propriété dans un objet
+### Suppresion de propriété dans un objet
 Il est possible de supprimer une seul propriété dans un objet en utilisant `delete`
 Exemple: 
 ```js
@@ -170,7 +171,7 @@ delete(Eleve.birthDate)
 // Je supprime birthDate dans Eleve
 ```
 
-### -B Vérifier si un propriété existe
+### Vérifier si un propriété existe
 On peut vérifier si une propriété d'un objet existe avec la fonction `hasOwnProperty`
 Exemple: 
 ```js
@@ -188,7 +189,7 @@ if (Eleve.hasOwnProperty('age')) {
 }
 ```
 
-### -B Méthode Chaining
+### Méthode Chaining
 Le chaining est utilisé pour executé plusieurs fonction a la fois
 Exemple: 
 ```js
@@ -208,3 +209,62 @@ let Ladder = {
 }
 Ladder.up().up().down().down().up().show()
 ```
+
+
+# Les Classes 
+Les classes sont introduites en JavaScript pour permettre une structure plus organisée du code et faciliter l’utilisation de concepts
+On peut définir une class en JS avec le mot clé `class` suivi du nom de la class et des parenthèses qui contiennent les attributs ou les méthode
+
+Exemple : 
+```js
+class NomDeMaClasseQuiNestPasTropLongueMaisQuandMemeUnPeu {
+    constructor(prenom, nom) { // IL EST OBLIGATOIRE
+        // On initialise les propriétés de ma classe
+        // Le constructeur sert à définir des propriétés et des méthodes par défaut
+        // Le constructeur est appelée automatiquement par la classe lors de la création d'une
+        // instance
+        this.test = 'Test'
+        this.Prenom = prenom
+        this.Nom = nom
+    }
+    // Je n'est pas besoin  d'ajouter le mot clé "function" avant la méthode  puisque je suis 
+    // dans une classe
+    PresenterSoi() { // Ici je créer une fonction  qui va afficher le prénom et le nom de l'objet en question 
+        console.log(`Je suis ${this.Prenom} ${this.Nom}.`)
+    }
+}
+
+// Je créer une instance de ma classe
+// Une Instance est une copie exacte de ma Classe avec ses propres propriétés et méthodes
+const InstanceDeClasse = new NomDeMaClasseQuiNestPasTropLongueMaisQuandMemeUnPeu("Didier", "GrandJean")
+
+InstanceDeClasse.PresenterSoi()
+```
+## La méthode statique
+La méthode static est une méthode qui appartient à la classe elle-même plutôt qu’à l’objet créé à partir de cette dernière. 
+La méthode statique n'est pas appelée par l'instance d'une class mais bien par la classe elle
+même. Elle peut être utilisée pour définir des méthodes qui ne dépendent pas  de l'état courant de l'objet. 
+
+Exemple : 
+```js
+class MonSuperbeClubDeFootball {
+    constructor(joueurs) {
+        this.joueurs = []
+    }        
+    static nbMax = 11
+    static DateAujourdhui() {
+        const date = new Date();
+        return `${date.getHours()}h${date.getMinutes()}h${date.getSeconds()}`;
+    }
+
+    ajoutJoueur(joueur) {
+        if (this.joueurs.length < MonSuperbeClubDeFootball.nbMax) {
+            this.joueurs.push(joueur)
+        }
+    }
+}
+
+let Club = new MonSuperbeClubDeFootball()
+console.log(MonSuperbeClubDeFootball.nbMax)
+console.log(MonSuperbeClubDeFootball.DateAujourdhui())
+// console.log(Club.DateAujourdhui())
